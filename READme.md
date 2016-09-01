@@ -44,7 +44,7 @@ The exercises below will take you through your journey toward mastering `transfo
 Good luck!
 
 
-### Build Transform:
+### 1. Build Transform:
 
 `transform` takes two parameters, collection and callback, loops through the collection transforming each item with the callback. It then collects each item into a results array and returns the final results to the user.
 
@@ -64,7 +64,7 @@ console.log(allValsMultipliedByTwo) // [2, 4, 6, 8, 10];
 ```
 
 
-### allNumbersMultipliedByThree
+### 2. allNumbersMultipliedByThree
 
 Use your `transform` with the `numbers` array to create a new array where each value is multiplied by 3. Save that array into a variable called `allNumbersMultipliedByThree`.
 
@@ -78,7 +78,7 @@ console.log(allNumbersMultipliedByThree);
 ```
 
 
-### bestSentenceToUpperCase
+### 3. bestSentenceToUpperCase
 
 Use your `transform` with the `bestSentence` string to create a new string where each word is in all caps. Save it into a variable named `bestSentenceToUpperCase`
 
@@ -88,9 +88,9 @@ console.log(bestSentenceToUpperCase) // "THIS IS THE BEST SIX WEEK COURSE EVER!"
 
 ```
 
-### collectedContents
+### 4. collectedContents
 
-Use your `transform` with the `person` object to create a new **array** of arrays that contain all of the keys and values inside of our `person` object. Save it into a variabled named `collectedContents`
+Use your `transform` with the `person` object to create a new **array** of arrays that contain all of the keys and values inside of our `person` object. Save it into a variable named `collectedContents`
 
 ```javascript
 
@@ -152,7 +152,7 @@ We don't have to type out how to loop through the array, or type out how to push
 
 The next handful of exercises will help you practice this skill that I already know you're wanting to build.
 
-### multByThree
+### 5. multByThree
 
 `multByThree` takes a `collection` as a parameter and returns a new collection containing each value multplied by 3.
 
@@ -171,7 +171,7 @@ Example:
 
 ```
 
-### upperCase
+### 6. upperCase
 	
 `upperCase` takes a `string` as a parameter and returns a new string with each word made to be all caps.
 
@@ -189,9 +189,9 @@ Example:
 
 ```
 
-### contentsCollection
+### 7. contentsCollection
 	
-`contentsCollection` takes an `object` as a parameter and returns an **array** containing all of the keys and values.
+`contentsCollection` takes an `object` as a parameter and returns an **array** of arrays containing all of the keys and values.
 
 ***Rebuild*** (not copy) the functionality you built for `collectedContents` and wrap it in a function named `contentsCollection`.
 
@@ -199,7 +199,7 @@ Example:
 
 	var person = {name: 'Jon', greatestFear: 'fearItself'};
 	var collectedContents = contentsCollection(person);
-	console.log(collectedContents); // ['name', 'Jon', 'greatestFear', 'fear itself'];
+	console.log(collectedContents); // [['name', 'Jon'], ['greatestFear', 'fear itself']];
 
 ```
 
@@ -267,7 +267,7 @@ console.log(numbersMultipliedByPi) // I'll let you figure it out.
 So now you know about flexibility! The next couple of exercises will **expand** your mind to think about flexibility when building out functionality.
 
 
-### multByWhatever
+### 8. multByWhatever
 
 `multByWhatever` takes a `collection` and an `inputNum` and returns a new array containing each value multiplied by the `inputNum`.
 
@@ -283,12 +283,12 @@ Example from above:
 
 ```
 
-### divideByWhatever
+### 9. divideByWhatever
 	
 `divideByWhatever` takes a `collection` and an `inputNum` and returns a new array containing each value divided by the `inputNum`.
 
 
-### switchCase 
+### 10. switchCase 
 
 `switchCase` takes a `sentence` and a `case` as parameters and returns the string based on the case.
 
@@ -306,13 +306,13 @@ Example from above:
 
 ```
 
-### contentsCollector
+### 11. contentsCollector
 	
 `contentsCollector` takes an `object` and a `specifier` and returns an array containing:
 
 * [ ] `if` the `specifier` is 'keys' return an array containing all of the keys.  
 * [ ] `if` the `specifier` is 'values' return an array containing all of the values.  
-* [ ] `if` there is no specifier passed in, return an array containing the keys and values.  
+* [ ] `if` there is no specifier passed in, return an array of arrays containing all of the keys and values.  
 
 ```javascript
 
@@ -324,7 +324,7 @@ Example from above:
 	console.log(allValuesInPerson)  // ['Jon', 'fearItself'];
 
 	var keysAndValuesInPerson = contentsCollector(person);
-	console.log(keysAndValuesInPerson) // ['name', 'Jon', 'greatestFear', 'fearItself'];
+	console.log(keysAndValuesInPerson) // [['name', 'Jon'], ['greatestFear', 'fearItself']];
 
 ```
 
@@ -340,7 +340,7 @@ Now that we know we can use higher order functions like `loop` and `transform` t
 
 The rest of this exercise will take you through building a library of higher order functions, some of them built on top of `loop`. You will then use your library to achieve even cooler stuff.
 
-### makeArray
+### 12. makeArray
 
 `makeArray` takes a `number` as a parameter and returns an array starting at the integer 0 up until that number.
 
@@ -354,7 +354,7 @@ Use loop to achieve this functionality.
 
 ```
 
-### makeRow
+### 13. makeRow
 	
 `makeRow` takes an array, that we're going to call `row`, and replaces each value with an object with one property: `state`, set to 'null'.
 
@@ -370,7 +370,7 @@ Use either `transform` or `loop` to accomplish this.
 
 
 
-### makeTicTacToeBoard
+### 14. makeTicTacToeBoard
 
 A `matrix` is an `array` containing other arrays. A lot of the time they are used simulating board games (think checkers or connect four). Each `array` inside of a matrix can be considered a `row`, while each index inside of each `array` can be considered a `column`
 
@@ -417,7 +417,7 @@ By now you've definitely caught on to what we're accomplishing here. Using your 
 
 Now, to actually USE this board we're going to have to do something very special that's somewhat unrelated to higher order functions. Trust me here, it's going to make sense in a second.
 
-### gameCreator 
+### 15. gameCreator 
 	
 `gameCreator` will take a `ticTacToeBoard`, add it to an `object` set to the key 'gameBoard' property and return it to the user. The `object` will **also** have a `count` property set to 0.
 
@@ -434,7 +434,7 @@ Example:
 
 ```
 
-### setXorO:  
+### 16. setXorO:  
 
 `setXorO` takes two parameters:   
 
@@ -511,6 +511,6 @@ If we call setXorO again on a square that's been set it will alert us:
 
 # Done
 
-You have now completed Week 3 of Telegraph Prep+! You should feel very proud of yourself -- graduating from fundamentals to Higher Order Functions is not an easy feat. We aren't done yet, but by this point you should feel **very** comfortable using `loop` and `transorm`. 
+You have made significant progress! You should feel very proud of yourself -- graduating from fundamentals to Higher Order Functions is not an easy feat. We aren't done yet, but by this point you should feel **very** comfortable using `loop` and `transorm`. 
 
-If you don't, go back (with your partner preferrably) and work on understanding exactly what's going on. Next week we will continue to build out our function library, and use them to start some actual applications.
+If you don't, go back (with your partner preferrably) and work on understanding exactly what's going on. Next we will continue to build out our function library, and use them to start some actual applications.

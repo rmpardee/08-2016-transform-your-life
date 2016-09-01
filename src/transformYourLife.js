@@ -1,11 +1,11 @@
-var loop = function(collection, callback){
+var loop = function(collection, callback) {
 
-  if (Array.isArray(collection)){
-    for (var i = 0; i < collection.length; i++){
+  if (Array.isArray(collection)) {
+    for (var i = 0; i < collection.length; i++) {
       callback(collection[i], i);
     }
-  } else if (typeof collection === 'object'){
-    for (var key in collection){
+  } else if (typeof collection === 'object') {
+    for (var key in collection) {
       callback(collection[key], key);
     }
   }
@@ -14,10 +14,8 @@ var loop = function(collection, callback){
 
 // 1. Build transform.
 
-
 // 2. allNumbersMultipliedByThree
 var numbers = [1, 2, 3, 4, 5];
-
 
 // 3. bestSentenceToUpperCase
 var bestSentence = "This is the best six week course ever!";
@@ -39,10 +37,14 @@ var person = {name: 'Jon', greatestFear: 'fearItself'};
 
 // 11. contentsCollector
 
-// 13. makeArray
+// 12. makeArray
 
-// 14. makeRow
+// 13. makeRow
 
-// 15. makeTicTacToeBoard
+// 14. makeTicTacToeBoard
+
+// EXTRA CREDIT:
+
+// 15. gameCreator
 
 // 16. setXorO 
